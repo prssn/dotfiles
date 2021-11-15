@@ -1,6 +1,7 @@
+#!/bin/zsh
 
 # Configs
-alias reload='source ~/.zshrc'
+alias reload="source ~/.zshrc"
 alias zshconfig="nano ~/.zshrc"
 alias sshconfig="nano ~/.ssh/config"
 alias tmuxconfig="nano ~/.tmux.conf.local"
@@ -29,10 +30,11 @@ alias nvp="npm version patch"
 alias np="npm publish"
 
 ### Misc
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias whatsmyip="curl https://ipinfo.io/ip"
-alias scanKeys='for key in ~/.ssh/*.pub; do ssh-keygen -l -f "${key}"; done | uniq'
-alias ffs='sudo !!'
+alias scanKeys='for key in $HOME/.ssh/*.pub; do ssh-keygen -l -f "${key}"; done | uniq'
+alias ffs="sudo !!"
+alias k=kubectl
 
 ### Specific to MacOS
 if [[ `uname` == "Darwin" ]]; then
