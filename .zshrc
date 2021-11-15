@@ -20,7 +20,6 @@ fpath=("${ZDOTDIR:-$HOME}/themes" $fpath)
 
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions
-source $ZDOTDIR/keybindings
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
@@ -30,3 +29,5 @@ zsh_add_plugin "brandonroehl/zsh-clean"
 
 autoload -Uz promptinit; promptinit
 prompt clean 256
+
+source $ZDOTDIR/keybindings
