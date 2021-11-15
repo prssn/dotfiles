@@ -1,0 +1,41 @@
+
+# Configs
+alias reload='source ~/.zshrc'
+alias zshconfig="nano ~/.zshrc"
+alias sshconfig="nano ~/.ssh/config"
+alias tmuxconfig="nano ~/.tmux.conf.local"
+
+# File system
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ll="ls -lsa"
+alias md="mkdir -p"
+alias rd="rmdir"
+
+### Git
+alias gs="git status"
+alias ga="git add"
+alias gp="git push"
+alias gl="git pull origin"
+alias gb="git branch "
+alias gc="git commit"
+alias gd="git diff"
+alias gco="git checkout "
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+
+### NPM
+alias nvp="npm version patch"
+alias np="npm publish"
+
+### Misc
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias whatsmyip="curl https://ipinfo.io/ip"
+alias scanKeys='for key in ~/.ssh/*.pub; do ssh-keygen -l -f "${key}"; done | uniq'
+alias ffs='sudo !!'
+
+### Specific to MacOS
+if [[ `uname` == "Darwin" ]]; then
+    alias flushDNS="sudo killall -HUP mDNSResponder;sudo kill mDNSResponderHelper;sudo dscacheutil -flushcache"
+	alias syncTime="sudo sntp -sS time.euro.apple.com"
+fi
