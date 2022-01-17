@@ -15,6 +15,7 @@ export SAVEHIST=10000
 
 fpath=("${ZDOTDIR:-$HOME}/plugins/" $fpath)
 fpath=("${ZDOTDIR:-$HOME}/plugins/zsh-clean" $fpath)
+fpath=("${ZDOTDIR:-$HOME}/plugins/zsh-completions/src" $fpath)
 fpath=("${ZDOTDIR:-$HOME}/completions/" $fpath)
 fpath=("${ZDOTDIR:-$HOME}/themes" $fpath)
 
@@ -24,6 +25,7 @@ source $ZDOTDIR/functions
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "zsh-users/zsh-history-substring-search"
+zsh_add_plugin "zsh-users/zsh-completions"
 zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "brandonroehl/zsh-clean"
 
