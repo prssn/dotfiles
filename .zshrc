@@ -12,24 +12,27 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export HISTSIZE=10000
 export SAVEHIST=10000
-
-fpath=("${ZDOTDIR:-$HOME}/plugins/" $fpath)
-fpath=("${ZDOTDIR:-$HOME}/plugins/zsh-clean" $fpath)
-fpath=("${ZDOTDIR:-$HOME}/plugins/zsh-completions/src" $fpath)
-fpath=("${ZDOTDIR:-$HOME}/completions/" $fpath)
-fpath=("${ZDOTDIR:-$HOME}/themes" $fpath)
+export zi_home="${HOME}/.zi"
 
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions
-
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "zsh-users/zsh-history-substring-search"
-zsh_add_plugin "zsh-users/zsh-completions"
-zsh_add_plugin "hlissner/zsh-autopair"
-zsh_add_plugin "brandonroehl/zsh-clean"
-
-autoload -Uz promptinit; promptinit
-prompt clean 256
-
 source $ZDOTDIR/keybindings
+source "${zi_home}/bin/zi.zsh"
+
+zi load zsh-users/zsh-autosuggestions
+zi load zsh-users/zsh-syntax-highlighting
+zi load zsh-users/zsh-history-substring-search
+zi load zsh-users/zsh-completions
+zi load hlissner/zsh-autopair
+zi load brandonroehl/zsh-clean
+
+autoload -Uz _zi
+(( ${+_comps} )) && _comps[zi]=_zi
+
+autoload -Uz promptinit; promptinit;
+autoload -Uz compinit; compinit;
+
+zstyle ':completion:*' completer _expand_alias _complete _ignored
+zstyle ':completion:*' regular true
+
+prompt clean 256
