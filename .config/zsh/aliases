@@ -40,6 +40,12 @@ alias whatsmyip="curl https://ipinfo.io/ip"
 alias scanKeys='for key in $HOME/.ssh/*.pub; do ssh-keygen -l -f "${key}"; done | uniq'
 alias ffs="sudo !!"
 alias k=kubectl
+alias ktx=kubectx
+alias kns=kubens
+alias g=git
+alias p=playerctl
+alias j=journalctl
+alias s=systemctl
 
 ### Specific to MacOS
 if [[ `uname` == "Darwin" ]]; then
