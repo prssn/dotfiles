@@ -13,6 +13,7 @@ export LC_CTYPE=en_US.UTF-8
 export HISTSIZE=10000
 export SAVEHIST=10000
 export zi_home="${HOME}/.zi"
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .cache --ignore node_moduels --ignore .git -g ""'
 
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions
