@@ -13,6 +13,7 @@ export LC_CTYPE=en_US.UTF-8
 export HISTSIZE=10000
 export SAVEHIST=10000
 export zi_home="${HOME}/.zi"
+export PATH="$PATH:$HOME/.spicetify"
 
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions
