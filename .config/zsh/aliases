@@ -45,4 +45,6 @@ alias k=kubectl
 if [[ `uname` == "Darwin" ]]; then
     alias flushDNS="sudo killall -HUP mDNSResponder;sudo kill mDNSResponderHelper;sudo dscacheutil -flushcache"
 	alias syncTime="sudo sntp -sS time.euro.apple.com"
+	alias mount_dev="mkdir -p ~/Media/dev.glimworks.se && sshfs -o idmap=user,noapplexattr,auto_cache,reconnect,defer_permissions,noappledouble,volname=dev.glimworks.se dev: ~/Media/dev.glimworks.se/"
+	alias umount_dev="diskutil umount ~/Media/dev.glimworks.se"
 fi
