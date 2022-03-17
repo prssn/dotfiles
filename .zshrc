@@ -14,6 +14,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export zi_home="${HOME}/.zi"
 export PATH="$PATH:$HOME/.spicetify"
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .cache --ignore node_moduels --ignore .git -g ""'
 
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions
