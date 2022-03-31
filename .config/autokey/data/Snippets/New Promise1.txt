@@ -1,0 +1,1 @@
+const db = await server.mongo.get('retailer');
