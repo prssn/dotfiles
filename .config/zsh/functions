@@ -4,3 +4,17 @@ generateKey() {
 
   ssh-keygen -t ed25519 -f ~/.ssh/$1 -P "" -C $2
 }
+
+workspace-upload() {
+
+  echo "Uploading workspace..."
+  rsync -raz --exclude=node_modules --exclude=build --exclude=yay --delete --progress /home/robin/Workspace dev:
+  echo "Done."
+}
+
+workspace-download() {
+
+  echo "Downloading workspace..."
+  rsync -raz --exclude=node_modules --exclude=build --exclude=yay --delete --progress dev:Workspace /home/robin
+  echo "Done."
+}
