@@ -1,0 +1,52 @@
+{
+    "0c0d9e40-2281-4700-ba4a-ca7fa12bc9fb": {
+        "id": "0c0d9e40-2281-4700-ba4a-ca7fa12bc9fb",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648107643.8538294
+    },
+    "2f3c6a73-48a0-4c63-8893-09659d366ee6": {
+        "id": "2f3c6a73-48a0-4c63-8893-09659d366ee6",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648107643.853872
+    },
+    "05484ca4-339c-4b8e-b59a-77895e3cf4f6": {
+        "id": "05484ca4-339c-4b8e-b59a-77895e3cf4f6",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648107643.8539014
+    },
+    "5f5362cd-012f-48b8-893e-97980bff810e": {
+        "id": "5f5362cd-012f-48b8-893e-97980bff810e",
+        "name": "Merinfo",
+        "keyword": "mi",
+        "cmd": "https://merinfo.se/search?who=%s",
+        "icon": "~/Downloads/meinfo.ico",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1669198073.0158086
+    },
+    "023cbbab-20a6-4584-8668-c64dc0449f20": {
+        "id": "023cbbab-20a6-4584-8668-c64dc0449f20",
+        "name": "Businesspartner",
+        "keyword": "bp",
+        "cmd": "https://businesspartner.se/#!/search?number=%s",
+        "icon": "~/Downloads/bp.ico",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1669198266.1657004
+    }
+}
