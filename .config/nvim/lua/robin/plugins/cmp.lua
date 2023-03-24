@@ -148,38 +148,38 @@ lspconfig["emmet_ls"].setup({
 })
 
 -- configure lua server (with special settings)
-lspconfig["sumneko_lua"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-  settings = { -- custom settings for lua
-    Lua = {
-      -- make the language server recognize "vim" global
-      diagnostics = {
-        globals = { "vim" },
-      },
-      workspace = {
-        -- make language server aware of runtime files
-        library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.stdpath("config") .. "/lua"] = true,
-        },
-      },
-    },
-  },
-})
+-- lspconfig["sumneko_lua"].setup({
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+--   settings = { -- custom settings for lua
+--     Lua = {
+--       -- make the language server recognize "vim" global
+--       diagnostics = {
+--         globals = { "vim" },
+--       },
+--       workspace = {
+--         -- make language server aware of runtime files
+--         library = {
+--           [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+--           [vim.fn.stdpath("config") .. "/lua"] = true,
+--         },
+--       },
+--     },
+--   },
+-- })
 
-saga.init_lsp_saga({
-  -- keybinds for navigation in lspsaga window
-  move_in_saga = { prev = "<C-k>", next = "<C-j>" },
-  -- use enter to open file with finder
-  finder_action_keys = {
-    open = "<CR>",
-  },
-  -- use enter to open file with definition preview
-  definition_action_keys = {
-    edit = "<CR>",
-  },
-})
+-- saga.init_lsp_saga({
+--   -- keybinds for navigation in lspsaga window
+--   move_in_saga = { prev = "<C-k>", next = "<C-j>" },
+--   -- use enter to open file with finder
+--   finder_action_keys = {
+--     open = "<CR>",
+--   },
+--   -- use enter to open file with definition preview
+--   definition_action_keys = {
+--     edit = "<CR>",
+--   },
+-- })
 
 null_ls.setup({
   -- setup formatters & linters
