@@ -5,9 +5,15 @@
 	],
 	"installed_packages":
 	[
+		"ChangeQuotes",
 		"Nord",
 		"Package Control",
 		"Rainglow",
+		"SideBarEnhancements",
+		"SideBarHider",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"SublimeOnSaveBuild",
 		"Tabnine",
 	],
 }

@@ -5,6 +5,7 @@
 	],
 	"theme": "Adaptive.sublime-theme",
 	"font_size": 14,
-	"color_scheme": "Packages/Rainglow/rainglow/Peacocks In Space Contrast (rainglow).tmTheme",
+	"color_scheme": "Packages/Rainglow/rainglow/Peacocks In Space (rainglow).tmTheme",
 	"auto_complete": true,
+	"trim_trailing_white_space_on_save": true,
 }
