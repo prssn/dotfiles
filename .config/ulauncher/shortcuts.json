@@ -14,7 +14,7 @@
         "name": "Merinfo",
         "keyword": "mi",
         "cmd": "https://merinfo.se/search?who=%s",
-        "icon": "/home/robin/Nextcloud/Linux/Icons/meinfo.ico",
+        "icon": "~/Nextcloud/Linux/Icons/meinfo.ico",
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1669198073.0158086
@@ -24,7 +24,7 @@
         "name": "Businesspartner",
         "keyword": "bp",
         "cmd": "https://businesspartner.se/#!/search?number=%s",
-        "icon": "/home/robin/Nextcloud/Linux/Icons/bp.ico",
+        "icon": "~/Nextcloud/Linux/Icons/bp.ico",
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1669198266.1657004
