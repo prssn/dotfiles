@@ -29,6 +29,7 @@
       <property name="&lt;Super&gt;r" type="empty">
         <property name="startup-notify" type="empty"/>
       </property>
+      <property name="&lt;Alt&gt;&lt;Super&gt;s" type="empty"/>
       <property name="&lt;Control&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="&lt;Control&gt;Escape" type="empty"/>
     </property>
@@ -56,6 +57,7 @@
       <property name="&lt;Super&gt;j" type="string" value="playerctl previous"/>
       <property name="&lt;Super&gt;odiaeresis" type="string" value="playerctl next"/>
       <property name="&lt;Super&gt;l" type="string" value="playerctl play-pause"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -r"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -114,8 +116,8 @@
       <property name="&lt;Primary&gt;F12" type="empty"/>
       <property name="&lt;Super&gt;KP_Left" type="empty"/>
       <property name="&lt;Super&gt;KP_Right" type="empty"/>
-      <property name="&lt;Super&gt;KP_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Down" type="empty"/>
+      <property name="&lt;Super&gt;KP_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Page_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Home" type="empty"/>
       <property name="&lt;Super&gt;KP_End" type="empty"/>
@@ -174,6 +176,8 @@
       <property name="Up" type="string" value="up_key"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Alt&gt;F12" type="string" value="fill_window_key"/>
+      <property name="&lt;Alt&gt;Left" type="string" value="left_workspace_key"/>
+      <property name="&lt;Alt&gt;Right" type="string" value="right_workspace_key"/>
     </property>
   </property>
   <property name="providers" type="array">
