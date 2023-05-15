@@ -1,8 +1,36 @@
 {
+    "com.github.nurgasemetey.ulauncher-timestamp-macros": {
+        "id": "com.github.nurgasemetey.ulauncher-timestamp-macros",
+        "url": "https://github.com/nurgasemetey/ulauncher-timestamp-macros",
+        "updated_at": "2022-02-15T13:46:22.246098",
+        "last_commit": "924f8230bc43ed20a16475b8e30976b639db4d68",
+        "last_commit_time": "2021-11-16T09:51:21"
+    },
+    "com.github.tchar.ulauncher-albert-calculate-anything": {
+        "id": "com.github.tchar.ulauncher-albert-calculate-anything",
+        "url": "https://github.com/tchar/ulauncher-albert-calculate-anything",
+        "updated_at": "2022-02-15T13:46:24.063129",
+        "last_commit": "ee0903174c8b87cd1f7c3b6c1acef10702547507",
+        "last_commit_time": "2021-08-12T06:39:56"
+    },
+    "com.github.the-lay.ulauncher-spotify-api": {
+        "id": "com.github.the-lay.ulauncher-spotify-api",
+        "url": "https://github.com/the-lay/ulauncher-spotify-api",
+        "updated_at": "2022-02-15T13:46:26.173286",
+        "last_commit": "fada055fca1ed1787e3908c66f3e326f7babb886",
+        "last_commit_time": "2021-08-30T16:47:42"
+    },
+    "com.github.ulauncher.ulauncher-emoji": {
+        "id": "com.github.ulauncher.ulauncher-emoji",
+        "url": "https://github.com/Ulauncher/ulauncher-emoji",
+        "updated_at": "2022-11-24T13:20:39.100947",
+        "last_commit": "4c6af50d1c9a24d5aad2c597634ff0c634972a5c",
+        "last_commit_time": "2021-08-08T19:19:59"
+    },
     "com.github.pywkm.ulauncher-spotify": {
         "id": "com.github.pywkm.ulauncher-spotify",
         "url": "https://github.com/pywkm/ulauncher-spotify",
-        "updated_at": "2022-11-23T11:17:20.791538",
+        "updated_at": "2023-03-27T09:13:11.486325",
         "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
         "last_commit_time": "2020-02-17T16:20:21"
     },
@@ -16,7 +44,7 @@
     "com.github.ceroprogramming.ulauncher-pulsecontrol": {
         "id": "com.github.ceroprogramming.ulauncher-pulsecontrol",
         "url": "https://github.com/CeroProgramming/ulauncher-pulsecontrol",
-        "updated_at": "2023-03-15T12:00:42.423629",
+        "updated_at": "2023-03-27T09:13:12.235889",
         "last_commit": "3e1c891b8b3c8f5cb50ea927853efd198ac84a1b",
         "last_commit_time": "2022-11-23T12:43:29"
     }
