@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"ChangeQuotes",
+		"JsFormat",
 		"Nord",
 		"Package Control",
 		"Rainglow",
