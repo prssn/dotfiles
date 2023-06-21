@@ -15,7 +15,7 @@ export SAVEHIST=10000
 #export zi_home="${HOME}/.zi"
 export zi_home="/home/robin/.config/zsh/.zi"
 export PATH="$PATH:$HOME/.spicetify"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$PATH:$HOME/.krew/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .cache --ignore node_moduels --ignore .git -g ""'
 
