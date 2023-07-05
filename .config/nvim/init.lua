@@ -1,52 +1,21 @@
-local Plug = vim.fn["plug#"]
+require "core"
 
-vim.call("plug#begin", "~/./plugged")
+local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
 
-Plug("windwp/nvim-autopairs")
-Plug("Rigellute/rigel")
-Plug("nvim-lualine/lualine.nvim")
-Plug("kyazdani42/nvim-web-devicons")
-Plug("junegunn/fzf", { dir = "~/.fzf" })
-Plug("jelera/vim-javascript-syntax")
-Plug("neovim/nvim-lspconfig")
-Plug("glepnir/lspsaga.nvim")
-Plug("pangloss/vim-javascript")
-Plug("mxw/vim-jsx")
-Plug("yangmillstheory/vim-snipe")
-Plug("nvim-lua/plenary.nvim")
-Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
-Plug("ntpeters/vim-better-whitespace")
-Plug("hrsh7th/nvim-cmp")
-Plug("hrsh7th/cmp-buffer")
-Plug("hrsh7th/cmp-path")
-Plug("rafamadriz/friendly-snippets")
-Plug("L3MON4D3/LuaSnip")
-Plug("saadparwaiz1/cmp_luasnip")
-Plug("neovim/nvim-lspconfig")
-Plug("hrsh7th/cmp-nvim-lsp")
-Plug("hrsh7th/cmp-buffer")
-Plug("hrsh7th/cmp-path")
-Plug("hrsh7th/cmp-cmdline")
-Plug("hrsh7th/nvim-cmp")
-Plug("williamboman/mason.nvim")
-Plug("williamboman/mason-lspconfig.nvim")
-Plug("neovim/nvim-lspconfig")
-Plug("hrsh7th/cmp-nvim-lsp")
-Plug("glepnir/lspsaga.nvim", { branch = "main" })
-Plug("jose-elias-alvarez/typescript.nvim")
-Plug("onsails/lspkind.nvim")
-Plug("jose-elias-alvarez/null-ls.nvim")
-Plug("jayp0521/mason-null-ls.nvim")
-Plug("preservim/nerdcommenter")
-Plug("ojroques/vim-oscyank", { branch = "main" })
+if custom_init_path then
+  dofile(custom_init_path)
+end
 
-vim.call("plug#end")
+require("core.utils").load_mappings()
 
--- require("robin.plugins-setup")
-require("robin.core.options")
-require("robin.core.keymaps")
-require("robin.core.theme")
-require("robin.plugins.lualine")
-require("robin.plugins.mason")
-require("robin.plugins.cmp")
-require("robin.plugins.autopair")
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+-- bootstrap lazy.nvim!
+if not vim.loop.fs_stat(lazypath) then
+  require("core.bootstrap").gen_chadrc_template()
+  require("core.bootstrap").lazy(lazypath)
+end
+
+dofile(vim.g.base46_cache .. "defaults")
+vim.opt.rtp:prepend(lazypath)
+require "plugins"
