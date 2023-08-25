@@ -12,8 +12,6 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export HISTSIZE=10000
 export SAVEHIST=10000
-#export zi_home="${HOME}/.zi"
-export zi_home="/home/robin/.config/zsh/.zi"
 export PATH="$PATH:$HOME/.spicetify"
 export PATH="$PATH:$HOME/.krew/bin"
 export PATH="$PATH:$HOME/.local/bin"
@@ -22,23 +20,9 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .cache --ignore node_moduels --
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions
 source $ZDOTDIR/keybindings
-source "${zi_home}/bin/zi.zsh"
-
-zi load zsh-users/zsh-autosuggestions
-zi load zsh-users/zsh-syntax-highlighting
-zi load zsh-users/zsh-history-substring-search
-zi load zsh-users/zsh-completions
-zi load greymd/docker-zsh-completion
-zi load hlissner/zsh-autopair
-zi load brandonroehl/zsh-clean
-
-autoload -Uz _zi
-(( ${+_comps} )) && _comps[zi]=_zi
 
 autoload -Uz promptinit; promptinit;
 autoload -Uz compinit; compinit;
 
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 zstyle ':completion:*' regular true
-
-prompt clean 256
