@@ -1,10 +1,10 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Configs
-alias reload="source ~/.zshrc"
-alias zshconfig="nano ~/.zshrc"
+alias reload="source ~/.bashrc"
+alias bashconfig="nano ~/.bashrc"
 alias sshconfig="nano ~/.ssh/config"
-alias tmuxconfig="nano ~/.tmux.conf.local"
+alias tmuxconfig="nano ~/.config/tmux/tmux.conf"
 
 # File system
 alias ..="cd .."
@@ -35,14 +35,15 @@ alias nvp="npm version patch"
 alias np="npm publish"
 
 ### Misc
-alias dotf="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'; source /usr/share/bash-completion/completions/git; __git_complete dotf __git_main
+alias g='git'; source /usr/share/bash-completion/completions/git; __git_complete g __git_main
+alias k='kubectl'; source <(kubectl completion bash); complete -o default -F __start_kubectl k
+alias d='docker'; source /etc/bash_completion.d/docker.sh; complete -F _docker d
 alias whatsmyip="curl https://ipinfo.io/ip"
 alias scanKeys='for key in $HOME/.ssh/*.pub; do ssh-keygen -l -f "${key}"; done | uniq'
 alias ffs="sudo !!"
-alias k=kubectl
 alias ktx=kubectx
 alias kns=kubens
-alias g=git
 alias p=playerctl
 alias j=journalctl
 alias s=systemctl
