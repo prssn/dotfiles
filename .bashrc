@@ -2,7 +2,7 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # User specific environment
@@ -22,8 +22,17 @@ shopt -s histappend
 
 case "$TERM" in
     xterm-color) color_prompt=yes;;
-	xterm-256color) color_prompt=yes;;
+    xterm-256color) color_prompt=yes;;
+    tmux-256color) color_prompt=yes;;
 esac
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
 PS1='\w \[\e[92m\]$(git branch --show-current 2>/dev/null)\n\[\e[0m\]> '
 
