@@ -35,10 +35,6 @@ alias nvp="npm version patch"
 alias np="npm publish"
 
 ### Misc
-alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'; source /usr/share/bash-completion/completions/git; __git_complete dotf __git_main
-alias g='git'; source /usr/share/bash-completion/completions/git; __git_complete g __git_main
-alias k='kubectl'; source <(kubectl completion bash); complete -o default -F __start_kubectl k
-alias d='docker'; source /etc/bash_completion.d/docker.sh; complete -F _docker d
 alias whatsmyip="curl https://ipinfo.io/ip"
 alias scanKeys='for key in $HOME/.ssh/*.pub; do ssh-keygen -l -f "${key}"; done | uniq'
 alias ffs="sudo !!"
@@ -48,10 +44,26 @@ alias p=playerctl
 alias j=journalctl
 alias s=systemctl
 
+if command -v kubectl &> /dev/null
+then
+    alias k='kubectl'; source <(kubectl completion bash); complete -o default -F __start_kubectl k
+fi
+
+if command -v git &> /dev/null
+then
+    alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'; source /usr/share/bash-completion/completions/git; __git_complete dotf __git_main
+    alias g='git'; source /usr/share/bash-completion/completions/git; __git_complete g __git_main
+fi
+
+if command -v docker &> /dev/null
+then
+    alias d='docker'; source /usr/share/bash-completion/completions/docker.sh; complete -F _docker d
+fi
+
 ### Specific to MacOS
 if [[ `uname` == "Darwin" ]]; then
     alias flushDNS="sudo killall -HUP mDNSResponder;sudo kill mDNSResponderHelper;sudo dscacheutil -flushcache"
-	alias syncTime="sudo sntp -sS time.euro.apple.com"
-	alias mount_dev="mkdir -p ~/Media/dev.glimworks.se && sshfs -o idmap=user,noapplexattr,auto_cache,reconnect,defer_permissions,noappledouble,volname=dev.glimworks.se dev: ~/Media/dev.glimworks.se/"
-	alias umount_dev="diskutil umount ~/Media/dev.glimworks.se"
+    alias syncTime="sudo sntp -sS time.euro.apple.com"
+    alias mount_dev="mkdir -p ~/Media/dev.glimworks.se && sshfs -o idmap=user,noapplexattr,auto_cache,reconnect,defer_permissions,noappledouble,volname=dev.glimworks.se dev: ~/Media/dev.glimworks.se/"
+    alias umount_dev="diskutil umount ~/Media/dev.glimworks.se"
 fi
