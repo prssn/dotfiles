@@ -67,3 +67,22 @@ if [[ `uname` == "Darwin" ]]; then
     alias mount_dev="mkdir -p ~/Media/dev.glimworks.se && sshfs -o idmap=user,noapplexattr,auto_cache,reconnect,defer_permissions,noappledouble,volname=dev.glimworks.se dev: ~/Media/dev.glimworks.se/"
     alias umount_dev="diskutil umount ~/Media/dev.glimworks.se"
 fi
+
+function generateKey {
+
+  ssh-keygen -t ed25519 -f ~/.ssh/$1 -P "" -C $2
+}
+
+function workspace-upload {
+
+  echo "Uploading workspace..."
+  rsync -raz --exclude=node_modules --exclude=build --exclude=yay --delete --progress /home/robin/Workspace dev:
+  echo "Done."
+}
+
+function workspace-download {
+
+  echo "Downloading workspace..."
+  rsync -raz --exclude=node_modules --exclude=build --exclude=yay --delete --progress dev:Workspace /home/robin
+  echo "Done."
+}
