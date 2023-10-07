@@ -1,0 +1,57 @@
+local plugins = {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "tsserver",
+      },
+      automatic_installation = true,
+    },
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require "custom.configs.null-ls"
+      end,
+    },
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "yaml-language-server",
+        "dockerfile-language-server",
+        "html-lsp",
+        "json-lsp",
+        "stylua",
+        "eslint_d",
+        "jsonlint",
+        "typescript-language-server",
+      },
+    },
+  },
+  {
+    "codota/tabnine-nvim",
+    build = "./dl_binaries.sh"
+  }
+}
+return plugins
