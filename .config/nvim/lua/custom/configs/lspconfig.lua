@@ -5,9 +5,9 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
-  "tsserver"
-  -- "typescript",
-  -- "typescript-language-server"
+  "tsserver",
+  "javascript",
+  "typescript"
 }
 
 for _, lsp in ipairs(servers) do
