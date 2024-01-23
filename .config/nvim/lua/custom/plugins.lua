@@ -57,5 +57,13 @@ local plugins = {
       vim.g.copilot_assume_mapped = true
     end,
   },
+  {
+    "cappyzawa/trim.nvim",
+    opts = {
+      trim_last_line = false,
+      trim_first_line = false,
+    },
+    lazy = false,
+  },
 }
 return plugins
