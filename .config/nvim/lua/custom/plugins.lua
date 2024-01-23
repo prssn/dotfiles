@@ -57,25 +57,5 @@ local plugins = {
       vim.g.copilot_assume_mapped = true
     end,
   },
-  {
-    "tpope/vim-dadbod",
-    lazy = false,
-  },
-  {
-    "kristijanhusak/vim-dadbod-ui",
-    dependencies = {
-      { "tpope/vim-dadbod", lazy = true },
-      { "kristijanhusak/vim-dadbod-completion", ft = { "javascript", "typescript", "sql", "mongodb", "mysql", "plsql" }, lazy = true },
-    },
-    cmd = {
-      "DBUI",
-      "DBUIToggle",
-      "DBUIAddConnection",
-      "DBUIFindBuffer",
-    },
-    init = function()
-      vim.g.db_ui_use_nerd_fonts = 1
-    end,
-  },
 }
 return plugins
