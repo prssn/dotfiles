@@ -58,36 +58,20 @@ local plugins = {
 		end,
 	},
 	{
-		"tpope/vim-dadbod",
-		lazy = false,
-	},
-	{
-		"kristijanhusak/vim-dadbod-ui",
-		dependencies = {
-			{ "tpope/vim-dadbod", lazy = true },
-			{
-				"kristijanhusak/vim-dadbod-completion",
-				ft = { "javascript", "typescript", "sql", "mongodb", "mysql", "plsql" },
-				lazy = true,
-			},
-		},
-		cmd = {
-			"DBUI",
-			"DBUIToggle",
-			"DBUIAddConnection",
-			"DBUIFindBuffer",
-		},
-		init = function()
-			vim.g.db_ui_use_nerd_fonts = 1
-		end,
-	},
-	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		ft = { "markdown" },
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
+	},
+	{
+		"cappyzawa/trim.nvim",
+		opts = {
+			trim_last_line = false,
+			trim_first_line = false,
+		},
+		lazy = false,
 	},
 }
 return plugins
