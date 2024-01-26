@@ -17,6 +17,7 @@ unset rc
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1000
 HISTFILESIZE=2000
+export EDITOR=nvim
 
 shopt -s histappend
 
