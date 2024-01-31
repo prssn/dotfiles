@@ -6,7 +6,6 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.dpi = 192
 config.color_scheme = 'Night Owl (Gogh)'
 config.font = wezterm.font('JetBrainsMono Nerd Font', {weight='Bold'})
 config.font_size = 12
