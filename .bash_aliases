@@ -86,3 +86,67 @@ function workspace-download {
   rsync -raz --exclude=node_modules --exclude=build --exclude=yay --delete --progress dev:Workspace /home/robin
   echo "Done."
 }
+
+function luks-open {
+
+	# Check if required arguments are provided
+	if [ "$#" -ne 3 ]; then
+		echo "Usage: $0 LUKS_FILE MOUNT_POINT LABEL"
+		return
+	fi
+
+	LUKS_FILE="$1"
+	MOUNT_POINT="$2"
+	LABEL="$3"
+
+	# Get the base name of the LUKS file (excluding the path and extension)
+	LUKS_BASENAME=$(basename -- "$LUKS_FILE")
+	MAPPER_NAME="${LUKS_BASENAME%.*}"
+
+	# Check if the mount point exists, and create it if not
+	if [ ! -d "$MOUNT_POINT" ]; then
+		sudo mkdir -p "$MOUNT_POINT"
+	fi
+
+	# Prompt user for the LUKS passphrase
+	echo -n "Enter LUKS passphrase for $LUKS_BASENAME: "
+	read -s passphrase
+	echo
+
+	# Unlock the LUKS container
+	sudo cryptsetup luksOpen "$LUKS_FILE" "$MAPPER_NAME" <<< "$passphrase"
+
+	# Mount the filesystem with full permissions
+	sudo mount "/dev/mapper/$MAPPER_NAME" "$MOUNT_POINT"
+
+	# Set the label of the mounted filesystem
+	sudo e2label "/dev/mapper/$MAPPER_NAME" "$LABEL"
+
+	echo "LUKS container ($LUKS_BASENAME) successfully unlocked and mounted at $MOUNT_POINT with label '$LABEL'"
+}
+
+function luks-close {
+
+	# Check if required argument is provided
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: $0 MOUNT_POINT"
+		return
+	fi
+
+	MOUNT_POINT="$1"
+	MAPPER_NAME="$2"
+
+	# Check if the specified mount point is currently mounted
+	if ! mountpoint -q "$MOUNT_POINT"; then
+		echo "Error: $MOUNT_POINT is not currently mounted."
+		return
+	fi
+
+	# Unmount the filesystem
+	sudo umount "$MOUNT_POINT"
+
+	# Close the LUKS container
+	sudo cryptsetup luksClose "$MAPPER_NAME"
+
+	echo "LUKS container ($MAPPER_NAME) successfully closed, $MOUNT_POINT unmounted, and device mapper removed."
+}
