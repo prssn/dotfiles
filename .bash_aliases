@@ -57,7 +57,7 @@ fi
 
 if command -v docker &> /dev/null
 then
-    alias d='docker'; source /usr/share/bash-completion/completions/docker.sh; complete -F _docker d
+    alias d='docker'; source /usr/share/bash-completion/completions/docker; complete -F _docker d
 fi
 
 ### Specific to MacOS
