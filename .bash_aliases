@@ -90,14 +90,13 @@ function workspace-download {
 function luks-open {
 
 	# Check if required arguments are provided
-	if [ "$#" -ne 3 ]; then
-		echo "Usage: $0 LUKS_FILE MOUNT_POINT LABEL"
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: $0 LUKS_FILE MOUNT_POINT"
 		return
 	fi
 
 	LUKS_FILE="$1"
 	MOUNT_POINT="$2"
-	LABEL="$3"
 
 	# Get the base name of the LUKS file (excluding the path and extension)
 	LUKS_BASENAME=$(basename -- "$LUKS_FILE")
@@ -119,10 +118,7 @@ function luks-open {
 	# Mount the filesystem with full permissions
 	sudo mount "/dev/mapper/$MAPPER_NAME" "$MOUNT_POINT"
 
-	# Set the label of the mounted filesystem
-	sudo e2label "/dev/mapper/$MAPPER_NAME" "$LABEL"
-
-	echo "LUKS container ($LUKS_BASENAME) successfully unlocked and mounted at $MOUNT_POINT with label '$LABEL'"
+	echo "LUKS container ($LUKS_BASENAME) successfully unlocked and mounted at $MOUNT_POINT"
 }
 
 function luks-close {
