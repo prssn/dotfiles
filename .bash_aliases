@@ -129,7 +129,7 @@ function luks-close {
 
 	# Check if required argument is provided
 	if [ "$#" -ne 2 ]; then
-		echo "Usage: $0 MOUNT_POINT"
+		echo "Usage: $0 MOUNT_POINT MAPPER_NAME"
 		return
 	fi
 
