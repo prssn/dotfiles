@@ -40,3 +40,5 @@ PS1='\w \[\e[92m\]$(git branch --show-current 2>/dev/null)\n\[\e[0m\]> '
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
