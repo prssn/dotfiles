@@ -2,9 +2,9 @@
 
 # Configs
 alias reload="source ~/.bashrc"
-alias bashconfig="nano ~/.bashrc"
-alias sshconfig="nano ~/.ssh/config"
-alias tmuxconfig="nano ~/.config/tmux/tmux.conf"
+alias bashconfig="nvim ~/.bashrc"
+alias sshconfig="nvim ~/.ssh/config"
+alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
 
 # File system
 alias ..="cd .."
