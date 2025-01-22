@@ -1,0 +1,35 @@
+session_name: retailer
+windows:
+- window_name: dev
+  layout: main-vertical
+  start_directory: /home/robin/Workspace/
+  panes:
+  - shell_command:
+    - clear
+    start_directory: ./__refactor_retailer/
+  - shell_command:
+    - clear
+    - dcl -f server
+    start_directory: ./__refactor_retailer/
+  - shell_command:
+    - clear
+    - yarn watch
+    start_directory: ./__refactor_retailer/server/web
+  - shell_command:
+    - clear
+    start_directory: ./retailer/domain_retailer_system
+- window_name: scripts
+  start_directory: /home/robin/Workspace/__refactor_retailer/scripts
+  panes:
+  - shell_command:
+    - clear
+  - shell_command:
+    - clear
+- window_name: prod
+  panes:
+  - shell_command:
+    - ssh retailer1
+    - clear
+  - shell_command:
+    - ssh retailer1
+    - clear
