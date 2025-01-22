@@ -30,6 +30,16 @@ alias gsl="git stash list"
 alias gsa="git stash apply"
 alias gsp="git stash pop"
 
+### Docker
+alias dc="docker compose"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dcl="docker compose logs"
+alias dce="docker compose exec"
+alias dcp="docker compose ps"
+alias dcr="docker compose restart"
+alias dcb="docker compose up -d --build"
+
 ### NPM
 alias nvp="npm version patch"
 alias np="npm publish"
