@@ -1,0 +1,26 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	sshCommand = "/usr/bin/ssh -i ~/.ssh/github"
+
+[user]
+	name = Robin Persson
+	email = rprssn@gmail.com
+
+[status]
+	showUntrackedFiles = no
+
+[remote "origin"]
+	url = git@github.com:prssn/dotfiles.git
+
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+
+[push]
+	followtags = true
+	autoSetupRemote = true
+
+[pull]
+	rebase = false
