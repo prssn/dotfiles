@@ -13,7 +13,6 @@ alias ....="cd ../../.."
 alias ll="ls -lsa"
 alias md="mkdir -p"
 alias rd="rmdir"
-alias rgrep="grep -Hr"
 
 ### Git
 alias gs="git status"
