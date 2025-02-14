@@ -53,6 +53,7 @@ alias kns=kubens
 alias p=playerctl
 alias j=journalctl
 alias s=systemctl
+alias code=codium
 
 if command -v kubectl &> /dev/null
 then
