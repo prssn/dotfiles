@@ -1,0 +1,182 @@
+{
+  "debug.console.fontFamily": "Menlo for Powerline",
+  "terminal.integrated.fontFamily": "Inconsolata-g for Powerline",
+  "terminal.integrated.fontSize": 14,
+  "editor.cursorBlinking": "solid",
+  "editor.lineNumbers": "on",
+  "vim.useSystemClipboard": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "vim.leader": "SPACE",
+  "vim.easymotion": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.files.newUntitledFile"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "m"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusNextGroup"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusPreviousGroup"
+      ]
+    }
+  ],
+  "editor.fontFamily": "JetBrainsMonoNerdFont,'Cascadia Mono', 'monospace-bold', Inconsolata-g",
+  "editor.formatOnPaste": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.renameOnType": true,
+  "mdb.defaultLimit": 25,
+  "terminal.external.linuxExec": "xterm-256color",
+  "terminal.integrated.allowWorkspaceConfiguration": true,
+  "terminal.integrated.tabs.enabled": true,
+  "git.confirmSync": false,
+  "diffEditor.renderSideBySide": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "files.watcherExclude": {
+    "**/build/**": true
+  },
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.startupEditor": "none",
+  "window.customMenuBarAltFocus": false,
+  "window.menuBarVisibility": "toggle",
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "tabnine.experimentalAutoImports": true,
+  "editor.fontLigatures": false,
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.fontSize": 16,
+  "workbench.editor.empty.hint": "hidden",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "editor.multiCursorLimit": 20000,
+  "tabby.endpoint": "http://0.0.0.0:8080",
+  "tabby.config.telemetry": true,
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "supermaven.enable": {
+    "*": false
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "CodeGPT.apiKey": "HuggingFace",
+  "workbench.colorTheme": "Night Owl",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "eslint.ignoreUntitled": true,
+  "eslint.quiet": true,
+  "eslint.run": "onSave"
+}
