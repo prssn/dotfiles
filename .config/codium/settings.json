@@ -178,5 +178,6 @@
   "editor.defaultFormatter": "vscode.typescript-language-features",
   "eslint.ignoreUntitled": true,
   "eslint.quiet": true,
-  "eslint.run": "onSave"
+  "eslint.run": "onSave",
+  "local-sync.autorestore": true
 }
