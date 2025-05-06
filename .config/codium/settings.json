@@ -179,5 +179,7 @@
   "eslint.ignoreUntitled": true,
   "eslint.quiet": true,
   "eslint.run": "onSave",
-  "local-sync.autorestore": true
+  "local-sync.autorestore": true,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false
 }
