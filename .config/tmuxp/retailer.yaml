@@ -1,4 +1,6 @@
 session_name: retailer
+environment:
+  COMPOSE_BAKE: "true"
 windows:
   - window_name: docker
     start_directory: /home/robin/Workspace/__refactor_retailer
