@@ -138,7 +138,6 @@
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.startupEditor": "none",
   "window.customMenuBarAltFocus": false,
-  "window.menuBarVisibility": "toggle",
   "files.autoSave": "afterDelay",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
@@ -180,6 +179,5 @@
   "eslint.quiet": true,
   "eslint.run": "onSave",
   "local-sync.autorestore": true,
-  "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false
+  "window.menuBarVisibility": "compact"
 }
