@@ -1,10 +1,13 @@
 [
+  "aaaaronzhou.nginx-config-formatter-vscode-extension",
   "anweber.local-sync",
   "continue.continue",
   "dbaeumer.vscode-eslint",
   "jgclark.vscode-todo-highlight",
   "johnnymorganz.stylua",
   "mechatroner.rainbow-csv",
+  "prateekmahendrakar.prettyxml",
+  "redhat.vscode-yaml",
   "sdras.night-owl",
   "solomonkinard.discrete-lines",
   "vscodevim.vim"
