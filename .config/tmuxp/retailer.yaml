@@ -22,7 +22,7 @@ windows:
         start_directory: ./retailer/server/web
       - shell_command:
           - clear
-        start_directory: ./retailer/domain_retailer_system
+        start_directory: ./domain_retailer_system
   - window_name: scripts
     layout: even-horizontal
     start_directory: /home/robin/Sync/Workspace/retailer/scripts
