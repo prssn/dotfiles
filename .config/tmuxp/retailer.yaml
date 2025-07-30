@@ -3,29 +3,29 @@ environment:
   COMPOSE_BAKE: "true"
 windows:
   - window_name: docker
-    start_directory: /home/robin/Workspace/__refactor_retailer
+    start_directory: /home/robin/Sync/Workspace/retailer
     panes:
       - shell_command:
           - clear
   - window_name: dev
     layout: main-vertical
-    start_directory: /home/robin/Workspace/
+    start_directory: /home/robin/Sync/Workspace/
     panes:
       - shell_command:
           - clear
-        start_directory: ./__refactor_retailer/
+        start_directory: ./retailer/
       - shell_command:
           - clear
-        start_directory: ./__refactor_retailer/
+        start_directory: ./retailer/
       - shell_command:
           - clear
-        start_directory: ./__refactor_retailer/server/web
+        start_directory: ./retailer/server/web
       - shell_command:
           - clear
         start_directory: ./retailer/domain_retailer_system
   - window_name: scripts
     layout: even-horizontal
-    start_directory: /home/robin/Workspace/__refactor_retailer/scripts
+    start_directory: /home/robin/Sync/Workspace/retailer/scripts
     panes:
       - shell_command:
           - clear
