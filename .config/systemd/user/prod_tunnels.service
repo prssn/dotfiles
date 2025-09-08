@@ -1,0 +1,12 @@
+
+[Unit]
+Description=Auto SSH Tunnel for prod_tunnels
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -N prod_tunnels
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
