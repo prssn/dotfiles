@@ -30,6 +30,7 @@ alias gsa="git stash apply"
 alias gsp="git stash pop"
 
 ### Docker
+alias d="docker"
 alias dc="docker compose"
 alias dcu="docker compose up"
 alias dcd="docker compose down"
