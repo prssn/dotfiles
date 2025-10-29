@@ -3,15 +3,11 @@ environment:
   COMPOSE_BAKE: "true"
   DOCKER_BUILDKIT: "1"
 windows:
-  - window_name: nvim
-    start_directory: /home/robin/Nextcloud/Workspace/retailer
-    panes:
-      - shell_command:
-          - nvim ./todo.txt
   - window_name: docker
     start_directory: /home/robin/Nextcloud/Workspace/retailer
     panes:
       - shell_command:
+          - code
           - clear
   - window_name: dev
     layout: main-vertical
