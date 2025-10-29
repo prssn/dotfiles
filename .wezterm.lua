@@ -1,13 +1,12 @@
-
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 local config = {}
 
 if wezterm.config_builder then
-  config = wezterm.config_builder()
+	config = wezterm.config_builder()
 end
 
-config.color_scheme = 'Night Owl (Gogh)'
-config.font = wezterm.font('JetBrainsMono Nerd Font', {weight='Bold'})
+config.color_scheme = "Night Owl (Gogh)"
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" })
 config.font_size = 12
 config.use_dead_keys = false
 config.scrollback_lines = 5000
