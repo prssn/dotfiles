@@ -1,6 +1,7 @@
 session_name: retailer
 environment:
   COMPOSE_BAKE: "true"
+  DOCKER_BUILDKIT: "1"
 windows:
   - window_name: nvim
     start_directory: /home/robin/Nextcloud/Workspace/retailer
