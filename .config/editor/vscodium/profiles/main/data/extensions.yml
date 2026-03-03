@@ -1,0 +1,30 @@
+disabled: []
+enabled:
+  - id: AaaaronZhou.nginx-config-formatter-vscode-extension
+    uuid: 187dc6f5-0396-4bdd-bb7e-3426924c71e5
+  - id: dbaeumer.vscode-eslint
+    uuid: 583b2b34-2c1e-4634-8c0b-0b82e283ea3a
+  - id: DotJoshJohnson.xml
+    uuid: 0cb81da2-1880-4755-9995-0ae9cc728e20
+  - id: EditorConfig.EditorConfig
+    uuid: f60a60a6-95ba-42d4-b41c-3d24c1b89588
+  - id: foxundermoon.shell-format
+    uuid: 5fb19573-2183-4cf2-b53d-0fb869dae7ae
+  - id: jeanp413.open-remote-ssh
+    uuid: 9fc16cea-08e2-4ae5-bf75-224004d722ff
+  - id: jgclark.vscode-todo-highlight
+    uuid: 4b3f0982-ad12-491b-b1b2-098f42c230af
+  - id: JohnnyMorganz.stylua
+    uuid: 6f48cf48-3912-4acc-8119-94a96a062cc1
+  - id: mechatroner.rainbow-csv
+    uuid: 3792588c-3d35-442d-91ea-fe6a755e8155
+  - id: redhat.vscode-xml
+    uuid: 6703768d-d42f-474e-9f6e-5f288d53f6e8
+  - id: redhat.vscode-yaml
+    uuid: 2061917f-f76a-458a-8da9-f162de22b97e
+  - id: sdras.night-owl
+    uuid: e58f546c-babc-455f-a265-ba40dbd140d4
+  - id: solomonkinard.discrete-lines
+    uuid: a06723a9-4f48-4590-9c41-79c42e077cdc
+  - id: zokugun.cron-tasks
+    uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb
