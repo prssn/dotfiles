@@ -1,4 +1,5 @@
 set $mod Mod4
+set $alt Mod1
 set $term wezterm
 set $menu wofi --show drun --width 600 --height 400 --no-actions --sort-order=alphabetical
 set $browser google-chome-canary
@@ -51,18 +52,20 @@ input * {
 # Workspaces:
 #
     # Switch workspace
-    bindsym $mod+b workspace number 1
-    bindsym $mod+n workspace number 2
-    bindsym $mod+m workspace number 3
-    bindsym $mod+j workspace number 4
-    bindsym $mod+k workspace number 5
+    bindsym $alt+b workspace number 1
+    bindsym $alt+n workspace number 2
+    bindsym $alt+m workspace number 3
+    bindsym $alt+j workspace number 4
+    bindsym $alt+k workspace number 5
 
     # Move focused window to workspace
-    bindsym $mod+Shift+b move container to workspace number 1
-    bindsym $mod+Shift+n move container to workspace number 2
-    bindsym $mod+Shift+m move container to workspace number 3
-    bindsym $mod+Shift+j move container to workspace number 4
-    bindsym $mod+Shift+k move container to workspace number 5
+    bindsym $alt+Shift+b move container to workspace number 1
+    bindsym $alt+Shift+n move container to workspace number 2
+    bindsym $alt+Shift+m move container to workspace number 3
+    bindsym $alt+Shift+j move container to workspace number 4
+    bindsym $alt+Shift+k move container to workspace number 5
+
+    bindsym $alt+Tab workspace back_and_forth
 #
 # Layout stuff:
 #
