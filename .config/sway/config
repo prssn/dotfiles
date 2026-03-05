@@ -141,23 +141,6 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-#
-# Status Bar:
-#
-bar {
-    position top
-
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    font JetBrainsMono Nerd Font 10
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-
 include /etc/sway/config.d/*
 
 # Wallpaper
@@ -174,5 +157,6 @@ gaps outer 5
 #Misc
 bindsym $mod+w nop
 exec_always autotiling
+exec_always waybar
 #client.focused          #22da6e #222222 #ffffff #22da6e #222222
 client.focused          #22da6e #000000 #ffffff #22da6e #22da6e

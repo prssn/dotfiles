@@ -1,0 +1,18 @@
+* {
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-weight: 600;
+}
+
+window#waybar {
+    background: #323232;
+    color: #ffffff;
+}
+
+#workspaces button {
+    color: #5c5c5c;
+}
+
+#workspaces button.focused {
+    color: #ffffff;
+}
