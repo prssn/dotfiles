@@ -1,10 +1,4 @@
-
-echo "PUP THAT SHIET"
-
+pactl set-sink-mute @DEFAULT_SINK@ false
 pactl set-sink-volume @DEFAULT_SINK@ +5%
-
 vol=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -o '[0-9]\+%' | head -1)
-
-echo int:value:${vol%%%} "Volume" "$vol"
-
 notify-send -t 500 -h int:value:${vol%%%} "Volume" "$vol"

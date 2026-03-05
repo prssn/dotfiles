@@ -1,7 +1,5 @@
 pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 muted=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
-
 if [ "$muted" = "yes" ]; then
     notify-send "Volume muted"
 else
