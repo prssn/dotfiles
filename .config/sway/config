@@ -1,6 +1,6 @@
 set $mod Mod4
 set $alt Mod1
-set $term wezterm
+set $term foot
 set $menu wofi --show drun --width 600 --height 400 --no-actions --sort-order=alphabetical
 set $browser google-chome-canary
 
