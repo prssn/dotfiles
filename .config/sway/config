@@ -158,5 +158,6 @@ gaps outer 5
 bindsym $mod+w nop
 exec_always autotiling
 exec_always waybar
+exec_always mako
 #client.focused          #22da6e #222222 #ffffff #22da6e #222222
 client.focused          #22da6e #000000 #ffffff #22da6e #22da6e

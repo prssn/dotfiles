@@ -1,0 +1,10 @@
+font=Noto Sans 12
+background-color=#323232
+text-color=#ffffff
+border-size=2
+border-radius=8
+
+default-timeout=5000
+
+[urgency=critical]
+default-timeout=0
