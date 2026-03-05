@@ -1,0 +1,60 @@
+window {
+    margin: 0px;
+    border: 2px solid #22da6e;
+    background-color: #011627;
+    border-radius: 8px;
+}
+
+#input {
+    margin: 10px;
+    border: none;
+    color: #d6deeb;
+    background-color: #0b253a;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+#inner-box {
+    margin: 10px;
+    border: none;
+    background-color: #011627;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #011627;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #d6deeb;
+}
+
+#entry {
+    padding: 6px;
+    border-radius: 6px;
+}
+
+#entry:selected {
+    background-color: #13344f;
+    color: #22da6e;
+}
+
+#entry:selected #text {
+    color: #22da6e;
+}
+
+#entry:hover {
+    background-color: #0b2942;
+}
+
+#img {
+    margin-right: 8px;
+}
