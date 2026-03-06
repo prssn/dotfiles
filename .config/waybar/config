@@ -66,7 +66,7 @@
         "interval": 5,
         "family": "ipv4",
         "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "󰈁  {ifname}", // Icon: ethernet
+        "format-ethernet": "󰈀  {ifname}", // Icon: ethernet
         "format-disconnected": "󰈂  Disconnected",
         "tooltip-format": "IP: {ipaddr}/{cidr}\nGateway:{gwaddr}\nNetmask:{netmask}\nUp:{bandwidthUpBits}\nDown:{bandwidthDownBits}"
     },
