@@ -3,12 +3,10 @@
     "position": "top",
     // If height property would be not present, it'd be calculated dynamically
     "height": 30,
-
     "modules-left": [
         "sway/workspaces"
     ],
-    "modules-center": [
-    ],
+    "modules-center": [],
     "modules-right": [
         "pulseaudio",
         "network",
@@ -19,7 +17,6 @@
         "clock#date",
         "clock#time"
     ],
-
     "battery": {
         "interval": 10,
         "states": {
@@ -35,54 +32,48 @@
             "", // Icon: battery-three-quarters
             "", // Icon: battery-half
             "", // Icon: battery-quarter
-            ""  // Icon: battery-empty
+            "" // Icon: battery-empty
         ],
         "tooltip": true
     },
-
     "clock#time": {
         "interval": 1,
         "format": "{:%H:%M:%S}",
         "tooltip": false
     },
-
     "clock#date": {
-      "interval": 10,
-      "format": "  {:%e %b %Y}", // Icon: calendar-alt
-      "tooltip-format": "{:%e %B %Y}"
+        "interval": 10,
+        "format": "  {:%e %b %Y}", // Icon: calendar-alt
+        "tooltip-format": "{:%e %B %Y}"
     },
-
     "cpu": {
         "interval": 5,
         "format": "  {usage}% ({load})", // Icon: microchip
-        "states": {
-          "warning": 70,
-          "critical": 90
-        }
-    },
-
-    "memory": {
-        "interval": 5,
-            "format": "󰍛  {}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
         }
     },
-
+    "memory": {
+        "interval": 5,
+        "format": "󰍛  {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
     "network": {
         "interval": 5,
+        "family": "ipv4",
         "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "󰈁  {ipaddr}", // Icon: ethernet
+        "format-ethernet": "󰈁  {ifname}", // Icon: ethernet
         "format-disconnected": "󰈂  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}"
+        "tooltip-format": "IP: {ipaddr}/{cidr}\nGateway:{gwaddr}\nNetmask:{netmask}\nUp:{bandwidthUpBits}\nDown:{bandwidthDownBits}"
     },
-
     "sway/mode": {
         "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
         "tooltip": false
     },
-
     "sway/workspaces": {
         "all-outputs": false,
         "disable-scroll": true,
@@ -92,39 +83,39 @@
             "2": "",
             "3": "󰒱",
             "4": "",
-            "5": "",
-            "urgent": ""
+            "5": ""
         }
     },
-
     "pulseaudio": {
-       "scroll-step": 1,
-       "format": "{icon}  {volume}%",
-       "format-bluetooth": "{icon}  {volume}%",
-       "format-muted": "",
-       "format-icons": {
-           "headphones": "",
-           "handsfree": "",
-           "headset": "",
-           "phone": "",
-           "portable": "",
-           "car": "",
-           "default": ["", ""]
-       },
-       "on-click": "pavucontrol"
+        "scroll-step": 1,
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
     },
-
     "temperature": {
-      "critical-threshold": 80,
-      "interval": 5,
-      "format": "{icon}  {temperatureC}°C",
-      "format-icons": [
-          "", // Icon: temperature-empty
-          "", // Icon: temperature-quarter
-          "", // Icon: temperature-half
-          "", // Icon: temperature-three-quarters
-          ""  // Icon: temperature-full
-      ],
-      "tooltip": true
+        "critical-threshold": 80,
+        "interval": 5,
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            "" // Icon: temperature-full
+        ],
+        "tooltip": true
     }
 }
