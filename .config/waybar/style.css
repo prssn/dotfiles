@@ -175,7 +175,7 @@
 
 window#waybar {
     background: #011627;
-    color: #d6deeb;
+    color: white;
 }
 
 #workspaces button {
@@ -196,4 +196,20 @@ window#waybar {
 #workspaces button.urgent {
     background: #ff5874;
     color: white;
+}
+
+#custom-temps {
+    padding: 0 10px;
+}
+
+#custom-temps.cool {
+    color: white;
+}
+
+#custom-temps.warm {
+    color: yellow;
+}
+
+#custom-temps.hot {
+    color: red;
 }

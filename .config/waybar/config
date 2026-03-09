@@ -6,16 +6,17 @@
     "modules-left": [
         "sway/workspaces"
     ],
-    "modules-center": [],
+    "modules-center": [
+        "clock#date",
+        "clock#time"
+    ],
     "modules-right": [
         "pulseaudio",
         "network",
         "memory",
         "cpu",
-        "temperature",
-        "battery",
-        "clock#date",
-        "clock#time"
+        "custom/temps",
+        "battery"
     ],
     "battery": {
         "interval": 10,
@@ -38,12 +39,12 @@
     },
     "clock#time": {
         "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "format": "  {:%H:%M:%S}",
         "tooltip": false
     },
     "clock#date": {
         "interval": 10,
-        "format": "  {:%e %b %Y}", // Icon: calendar-alt
+        "format": "  {:%Y-%m-%d}", // Icon: calendar-alt
         "tooltip-format": "{:%e %B %Y}"
     },
     "cpu": {
@@ -105,17 +106,9 @@
         },
         "on-click": "pavucontrol"
     },
-    "temperature": {
-        "critical-threshold": 80,
+    "custom/temps": {
+        "exec": "~/.config/waybar/scripts/temps.sh",
         "interval": 5,
-        "format": "{icon}  {temperatureC}°C",
-        "format-icons": [
-            "", // Icon: temperature-empty
-            "", // Icon: temperature-quarter
-            "", // Icon: temperature-half
-            "", // Icon: temperature-three-quarters
-            "" // Icon: temperature-full
-        ],
-        "tooltip": true
+        "return-type": "json"
     }
 }
