@@ -1,0 +1,37 @@
+[user]
+  email = robin.persson@glimworks.com
+  name = Robin Persson
+
+[alias]
+  st = "status"
+  cdeps = "!f() { \
+    file=\"${1:-package.json}\"; \
+    msg=$(git diff --cached $file | \
+    grep '^\\+\\s\\+\"[^\"]\\+\":' | \
+    sed 's/^\\+\\s\\+\"\\([^\"]\\+\\)\": \"\\([^\"]\\+\\)\"/\\1@\\2/' | \
+    sed 's/,\\?$//' | \
+    sort | \
+    paste -sd' '); \
+    if [ -z \"$msg\" ]; then \
+      echo 'No staged dependency changes found in $file'; \
+      exit 1; \
+    fi; \
+    git commit -m \"$file: $msg\"; \
+  }; f"
+
+[core]
+  editor = "nvim"
+  sshCommand = "/usr/bin/ssh -i ~/.ssh/id_ed25519"
+  filemode = false
+
+[push]
+  followtags = true
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
+[init]
+  defaultBranch = main
